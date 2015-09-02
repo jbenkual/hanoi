@@ -15,18 +15,24 @@
   </head>
   <body>
     <div class="title">
-      <h1 class="red" id="title"> Tower of Hanoi </h1>
+      <h1 id="title"> Tower of Hanoi </h1>
+      <h3 id="count"> Moves: 0 </h3>
     </div>
-
-    <div class="main" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <div class="container left">
+    <div id="test">
+        <button class="restart" onclick="restart()">Restart</button>
+    </div>
+    <div class="main">
+        <div class="container left" ondrop="drop(event)" ondragover="allowDrop(event)" id="c1">
+            <div class="spacer"></div>
             <div class="block1" ondragstart="drag(event)" draggable="true" id="1"></div>
-        </div>
-        <div class="container middle">
             <div class="block2" ondragstart="drag(event)" draggable="true" id="2"></div>
-        </div>
-        <div class="container right">
             <div class="block3" ondragstart="drag(event)" draggable="true" id="3"></div>
+        </div>
+        <div class="container middle" ondrop="drop(event)" ondragover="allowDrop(event)" id="c2">
+            <div class="spacer"></div>
+        </div>
+        <div class="container right" ondrop="drop(event)" ondragover="allowDrop(event)" id="c3">
+            <div class="spacer"></div>
         </div>
     </div>
 
