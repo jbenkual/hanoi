@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="Tower of Hanoi" content="">
+    <meta name="Joseph Benkual" content="">
+
+    <title>Tower of Hanoi</title>
+
+    <!-- Custom styles for this template -->
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="title"> Tower of Hanoi </h1>
+      <h3 id="count"> Moves: 0 </h3>
+    </div>
+    <div id="test">
+        <button class="restart" onclick="restart()">Restart</button>
+    </div>
+    <div class="main">
+        <div class="container left" ondrop="drop(event)" ondragover="allowDrop(event)" id="c1">
+            <div class="spacer"></div>
+            <div class="block1" ondragstart="drag(event)" draggable="true" id="1"></div>
+            <div class="block2" ondragstart="drag(event)" draggable="true" id="2"></div>
+            <div class="block3" ondragstart="drag(event)" draggable="true" id="3"></div>
+        </div>
+        <div class="container middle" ondrop="drop(event)" ondragover="allowDrop(event)" id="c2">
+            <div class="spacer"></div>
+        </div>
+        <div class="container right" ondrop="drop(event)" ondragover="allowDrop(event)" id="c3">
+            <div class="spacer"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
